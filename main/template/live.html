@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Video Stream</title>
+</head>
+<body>
+    <h1>Live Video Stream</h1>
+    <div>
+        <img id="scatter-img" src="{{ url_for('video_feed') }}" alt="Scatter Image">
+    </div>
+    <div>
+        <img id="skeleton-img" src="{{ url_for('video_feed') }}" alt="Skeleton Image">
+    </div>
+
+    <script>
+        // Update the image sources periodically to display the latest frames
+        setInterval(function() {
+            var scatterImg = document.getElementById('scatter-img');
+            scatterImg.src = "{{ url_for('video_feed') }}" + '?' + new Date().getTime();
+
+            var skeletonImg = document.getElementById('skeleton-img');
+            skeletonImg.src = "{{ url_for('video_feed') }}" + '?' + new Date().getTime();
+        }, 1000); // Adjust the interval (in milliseconds) as needed
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+here is actually where we train our model from scratch using the coco dataset
+
+run flask run and go to http://127.0.0.1:5000
+
+the last train model is weak so it not compare to the one we convert to tf which is 1 epoh
+
+http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+Download the 2017 coco dataset and extract to lib/coco_data you should have the folder as follows
+
+annotations
+annotations_trainval2017
+train2017
+val2017
+
+
+
+after training to epoh 100 we convert to tflite then we use
+
+you can run the python media_pose.py path-to-image.format or python live.py for live preview
+
+
+
+
+
+File Format:
+
+
+.tflite (TensorFlow Lite): TensorFlow Lite is a lightweight framework for deploying machine learning models on mobile and embedded devices. The .tflite file format is specifically designed for mobile deployment, enabling efficient execution on resource-constrained devices.
+
+.hdf5 (Hierarchical Data Format): HDF5 is a file format that provides a flexible and efficient way to store and organize large amounts of data. It is commonly used in machine learning frameworks like Keras to save and load model architectures, weights, and other related data.
+
+
+
+Usage and Deployment:
+
+.tflite: TensorFlow Lite models are optimized for deployment on mobile and embedded platforms, such as smartphones, IoT devices, and microcontrollers. They are typically used when you want to run machine learning models directly on these devices with limited computational resources.
+
+.hdf5: HDF5 files are commonly used for storing and managing machine learning models during the development and training stages. They allow you to save and load model configurations, weights, optimizer states, and other training-related data. HDF5 files are primarily used in frameworks like Keras and can be deployed on various platforms, including desktop environments and servers.
+
+
+
+Model Representation:
+
+.tflite: TensorFlow Lite models are usually quantized and optimized to reduce the model size and improve inference speed on mobile devices. They may undergo techniques such as weight quantization and optimization for mobile deployment, sacrificing some precision in favor of efficiency.
+.hdf5: HDF5 files represent the model in its original form, including the full precision of weights and other parameters. They are primarily used during training, where high precision is important for accurate gradient computations and parameter updates.
+
+
+
+Compatibility:
+
+.tflite: TensorFlow Lite models are designed to run on TensorFlow Lite runtimes, which are available on a wide range of platforms and operating systems. They can be used with TensorFlow Lite APIs for inference on mobile devices.
+
+.hdf5: HDF5 files are more generic and can be used with machine learning frameworks that support the HDF5 format, such as TensorFlow, Keras, and PyTorch. They provide flexibility for loading models across different frameworks and platforms.
+
+
+
+In summary, .tflite files are optimized models for mobile and embedded devices, specifically for TensorFlow Lite inference, while .hdf5 files are more general-purpose files used for saving and loading machine learning models during development and training stages, without specific optimizations for mobile deployment

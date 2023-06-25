@@ -1,0 +1,7 @@
+main/lib/logs
+main/lib/models
+main/lib/coco_data/annotations
+main/lib/coco_data/annotations_trainval2017
+main/lib/coco_data/train2017
+main/lib/coco_data/val2017
+main/lib/coco_data/processed_img
