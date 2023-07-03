@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Pose Estimation</title>
+</head>
+<body>
+    <h1><a href="">Image</a><a href="live">Live</a></h1><br/>
+    <h1>Real-Time Pose Estimation</h1>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    
+  <h1>Note: Rendering Performance and the Limitations of Web-based Human Pose Models</h1>
+  <p>Dear User,</p>
+
+  <p>We understand that you may have noticed some delays in rendering the human pose model on our web application built using Python and TensorFlow with Flask. We would like to provide you with an explanation for the slower rendering and highlight the differences between web and mobile applications in terms of performance.</p>
+
+  <ol>
+    <li><strong>Complex Computations:</strong> Human pose estimation involves intricate mathematical calculations and deep learning algorithms. These computations require substantial processing power, especially when dealing with large models or high-resolution images. The limitations of web browsers and server infrastructure may cause slower rendering compared to more powerful dedicated hardware.</li>
+
+    <li><strong>Resource Limitations:</strong> Web applications often operate within resource-constrained environments, such as limited CPU and memory capacities, when compared to native mobile applications. These constraints can impact the performance and responsiveness of the model, resulting in slower rendering times.</li>
+
+    <li><strong>Network Latency:</strong> Web applications heavily rely on network communication between the client (browser) and the server. The time taken to send image data to the server for processing and receiving the results back can contribute to rendering delays, particularly if the network connection is slow or unstable.</li>
+
+    <li><strong>Optimization Challenges:</strong> While it is possible to optimize and fine-tune a web-based human pose model, achieving the same level of performance as native mobile applications can be challenging due to the differences in underlying technologies and hardware acceleration capabilities.</li>
+  </ol>
+
+  <p>As an example, consider Snapchat. Snapchat utilizes sophisticated augmented reality (AR) filters and real-time face tracking, which require significant computational resources. To achieve optimal performance and a smooth user experience, Snapchat utilizes native mobile applications that can harness the full power of the device's GPU and CPU, providing real-time rendering capabilities.</p>
+
+  <p>When comparing the speed of a human pose model on a mobile application versus a web application, the former tends to be faster due to the following factors:</p>
+
+  <ol>
+    <li><strong>Hardware Acceleration:</strong> Native mobile applications can leverage specialized hardware features like the GPU (Graphics Processing Unit) to accelerate complex computations, leading to faster rendering times.</li>
+
+    <li><strong>Reduced Network Overhead:</strong> Mobile applications often process data locally, eliminating the need for frequent network communication. This reduces network latency and results in faster real-time rendering.</li>
+
+    <li><strong>Platform Optimization:</strong> Mobile operating systems provide frameworks and tools optimized for real-time processing, ensuring efficient execution of complex tasks like human pose estimation.</li>
+  </ol>
+
+  <p>While web-based human pose models can provide valuable functionality and convenience, they may exhibit slower rendering speeds compared to their native mobile counterparts due to the aforementioned factors.</p>
+
+  <p>We appreciate your understanding and patience regarding the rendering performance of our human pose model in the web environment. Our team is continuously working on optimizations to enhance the model's efficiency and deliver faster rendering times. Please feel free to reach out to us with any further questions or feedback.</p>
+
+    
+</body>
+</html>

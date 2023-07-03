@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, Response, request, send_from_directory
+import tensorflow as tf, cv2, threading, numpy as np, sys, os
 from werkzeug.utils import secure_filename
-import tensorflow as tf, cv2, sys, os
 from evaluation import *
 
 app = Flask(__name__, template_folder='template')
@@ -59,6 +59,56 @@ def index():
 @app.route('/medias/<path:filename>')
 def serve_static(filename):
     return send_from_directory('medias', filename)
+
+
+
+# Load the model
+interpreter = tf.lite.Interpreter(model_path="model.tflite")
+interpreter.allocate_tensors()
+
+# Input and output details
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+input_size = input_details[0]['shape'][1]
+
+# Function to process frames
+def process_frames():
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        
+        # Preprocess frame
+        frame_resized = cv2.resize(frame, (input_size, input_size))
+        input_image = np.expand_dims(frame_resized, axis=0)
+        
+        # Run model inference
+        interpreter.set_tensor(input_details[0]['index'], input_image)
+        interpreter.invoke()
+        keypoints_with_scores = interpreter.get_tensor(output_details[0]['index'])
+        
+        # Visualize keypoints on frame
+        output_frame = draw_prediction_on_image(frame, keypoints_with_scores)
+        
+        # Convert frame to JPEG format
+        ret, jpeg = cv2.imencode('.jpg', output_frame)
+        
+        # Yield the JPEG frame as a response to the client
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() + b'\r\n\r\n')
+    
+    cap.release()
+
+@app.route('/live')
+def live():
+    return render_template('live.html')
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(process_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

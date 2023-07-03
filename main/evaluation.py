@@ -235,20 +235,3 @@ def draw_prediction_on_image(image, keypoints_with_scores):
     plt.close(fig)
 
     return output_overlay
-
-
-def to_gif(images, duration):
-  """Converts image sequence (4D numpy array) to gif."""
-  imageio.mimsave('./animation.gif', images, duration=duration)
-  return embed.embed_file('./animation.gif')
-
-def progress(value, max=100):
-  return HTML("""
-      <progress
-          value='{value}'
-          max='{max}',
-          style='width: 100%'
-      >
-          {value}
-      </progress>
-  """.format(value=value, max=max))

@@ -1,4 +1,5 @@
 import tensorflow as tf
+import tensorflowjs as tfjs
 from tensorflow.keras.models import model_from_json
 
 # Load Keras model
@@ -13,3 +14,6 @@ tflite_model = converter.convert()
 # Save the TFLite model to a file
 with open('model.tflite', 'wb') as f:
     f.write(tflite_model)
+
+# Convert the TFLite model to JavaScript format
+tfjs.converters.save_tfjs_model(converter.model, 'model_js')
