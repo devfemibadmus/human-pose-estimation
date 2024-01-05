@@ -1,7 +1,11 @@
 main/lib/logs
 main/lib/models
+main/helper/
+main/training/
 main/lib/coco_data/annotations
 main/lib/coco_data/annotations_trainval2017
 main/lib/coco_data/train2017
 main/lib/coco_data/val2017
 main/lib/coco_data/processed_img
+main/
+database/
