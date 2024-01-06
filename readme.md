@@ -85,6 +85,9 @@ Sample results, such as the original image and the corresponding result image sh
 - Result Image: `zainab_result.jpg`
 ![Result Image](medias/zainab_result.JPG?raw=true)
 
+- Live Video: `gif`
+![Result Image](medias/WhatsApp%20Video%202024-01-06%20at%2011.53.29%20AM.gif?raw=true)
+
 ### 8. Acknowledgments:
 
 The project acknowledges the use of the MoveNet model and TensorFlow Lite for efficient and real-time human pose estimation.
@@ -98,6 +101,40 @@ Enjoy exploring Human Pose Estimation with MoveNet!
 ### 9. Next Steps:
 
 Python enthusiasts can explore and enhance the project, potentially integrating it into other applications or experimenting with different models. Understanding this structure provides insights into how Python, TensorFlow Lite, and Flask can be combined to create a practical AI application. Feel free to explore further, experiment with different models, or contribute to the project for continuous improvement!
+
+# Note: Rendering Performance and the Limitations of Web-based Human Pose Models
+
+Dear User,
+
+We understand that you may have noticed some delays in rendering the human pose model on our web application built using Python and TensorFlow with Flask. We would like to provide you with an explanation for the slower rendering and highlight the differences between web and mobile applications in terms of performance.
+
+## Complex Computations
+
+Human pose estimation involves intricate mathematical calculations and deep learning algorithms. These computations require substantial processing power, especially when dealing with large models or high-resolution images. The limitations of web browsers and server infrastructure may cause slower rendering compared to more powerful dedicated hardware.
+
+## Resource Limitations
+
+Web applications often operate within resource-constrained environments, such as limited CPU and memory capacities, when compared to native mobile applications. These constraints can impact the performance and responsiveness of the model, resulting in slower rendering times.
+
+## Network Latency
+
+Web applications heavily rely on network communication between the client (browser) and the server. The time taken to send image data to the server for processing and receiving the results back can contribute to rendering delays, particularly if the network connection is slow or unstable.
+
+## Optimization Challenges
+
+While it is possible to optimize and fine-tune a web-based human pose model, achieving the same level of performance as native mobile applications can be challenging due to the differences in underlying technologies and hardware acceleration capabilities.
+
+As an example, consider Snapchat. Snapchat utilizes sophisticated augmented reality (AR) filters and real-time face tracking, which require significant computational resources. To achieve optimal performance and a smooth user experience, Snapchat utilizes native mobile applications that can harness the full power of the device's GPU and CPU, providing real-time rendering capabilities.
+
+When comparing the speed of a human pose model on a mobile application versus a web application, the former tends to be faster due to the following factors:
+
+- **Hardware Acceleration:** Native mobile applications can leverage specialized hardware features like the GPU (Graphics Processing Unit) to accelerate complex computations, leading to faster rendering times.
+- **Reduced Network Overhead:** Mobile applications often process data locally, eliminating the need for frequent network communication. This reduces network latency and results in faster real-time rendering.
+- **Platform Optimization:** Mobile operating systems provide frameworks and tools optimized for real-time processing, ensuring efficient execution of complex tasks like human pose estimation.
+
+While web-based human pose models can provide valuable functionality and convenience, they may exhibit slower rendering speeds compared to their native mobile counterparts due to the aforementioned factors.
+
+We appreciate your understanding and patience regarding the rendering performance of our human pose model in the web environment. Our team is continuously working on optimizations to enhance the model's efficiency and deliver faster rendering times. Please feel free to reach out to us with any further questions or feedback.
 
 
 

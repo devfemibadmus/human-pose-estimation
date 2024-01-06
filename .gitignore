@@ -9,3 +9,4 @@ main/lib/coco_data/val2017
 main/lib/coco_data/processed_img
 main/
 database/
+venv/
