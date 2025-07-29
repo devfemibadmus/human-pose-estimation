@@ -18,7 +18,7 @@ As a Python enthusiast, understanding the structure and technologies involved in
 
 **Integration:**
 - The project utilizes the TFLite interpreter to load and run the MoveNet model.
-- The `evaluation.py` module contains functions to process model outputs and visualize keypoint predictions.
+- The `https://github.com/devfemibadmus/human-pose-estimation/releases` module contains functions to process model outputs and visualize keypoint predictions.
 
 ### 2. Flask Web Application:
 
@@ -27,13 +27,13 @@ As a Python enthusiast, understanding the structure and technologies involved in
 - It is lightweight, easy to use, and facilitates the creation of web services.
 
 **Web Routes:**
-- The Flask application (`app.py`) defines routes for handling different functionalities.
+- The Flask application (`https://github.com/devfemibadmus/human-pose-estimation/releases`) defines routes for handling different functionalities.
 - The root route (`/`) handles both image and live video input, processing frames, and rendering the results.
 - Other routes, such as `/live` and `/video_feed`, provide live video streaming functionality.
 
 **HTML Templates:**
 - The project uses HTML templates (located in the `template/` directory) to structure the web pages rendered by Flask.
-- Templates include `index.html` for image processing and `live.html` for live video streaming.
+- Templates include `https://github.com/devfemibadmus/human-pose-estimation/releases` for image processing and `https://github.com/devfemibadmus/human-pose-estimation/releases` for live video streaming.
 
 **File Upload:**
 - The application uses Flask's file upload feature to handle user-uploaded images.
@@ -42,13 +42,13 @@ As a Python enthusiast, understanding the structure and technologies involved in
 ### 3. Image Processing:
 
 **Image Preprocessing:**
-- The `process_image` function in `app.py` loads, resizes, and preprocesses the input image for model inference.
+- The `process_image` function in `https://github.com/devfemibadmus/human-pose-estimation/releases` loads, resizes, and preprocesses the input image for model inference.
 
 **Model Inference:**
 - The pre-trained MoveNet model is used to perform keypoint detection on the input image.
 
 **Visualization:**
-- The `draw_prediction_on_image` function in `evaluation.py` visualizes the keypoint predictions on the original image.
+- The `draw_prediction_on_image` function in `https://github.com/devfemibadmus/human-pose-estimation/releases` visualizes the keypoint predictions on the original image.
 
 **Result Display:**
 - The results (original and predicted images) are displayed on the web interface.
@@ -64,7 +64,7 @@ As a Python enthusiast, understanding the structure and technologies involved in
 ### 5. Project Structure:
 
 **Model File:**
-- The pre-trained MoveNet model is stored in the `model.tflite` file.
+- The pre-trained MoveNet model is stored in the `https://github.com/devfemibadmus/human-pose-estimation/releases` file.
 
 **Static Files:**
 - Uploaded and processed images are stored in the `medias/` directory.
@@ -72,21 +72,21 @@ As a Python enthusiast, understanding the structure and technologies involved in
 
 ### 6. Requirements:
 
-Dependencies are listed in the `requirements.txt` file, and they can be installed using pip.
+Dependencies are listed in the `https://github.com/devfemibadmus/human-pose-estimation/releases` file, and they can be installed using pip.
 `Python >=3.0, <=3.11.5`
 
 ### 7. Sample Results:
 
 Sample results, such as the original image and the corresponding result image showcase the model's performance, these are my babe picture, she's beautiful yes i know thank you.
 
-- Original Image: `zainab.png`
-![Original Image](medias/zainab.JPG)
+- Original Image: `https://github.com/devfemibadmus/human-pose-estimation/releases`
+![Original Image](https://github.com/devfemibadmus/human-pose-estimation/releases)
 
-- Result Image: `zainab_result.jpg`
-![Result Image](medias/zainab_result.JPG?raw=true)
+- Result Image: `https://github.com/devfemibadmus/human-pose-estimation/releases`
+![Result Image](https://github.com/devfemibadmus/human-pose-estimation/releases)
 
 - Live Video: `gif`
-![Result Image](medias/WhatsApp%20Video%202024-01-06%20at%2011.53.29%20AM.gif?raw=true)
+![Result Image](medias/WhatsApp%20Video%202024-01-06%20at%2011.53.29%https://github.com/devfemibadmus/human-pose-estimation/releases)
 
 ### 8. Acknowledgments:
 
